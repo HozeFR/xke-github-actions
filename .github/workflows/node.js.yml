@@ -36,4 +36,4 @@ jobs:
         password: ${{secrets.TOKEN}}
     - run: echo "tag=$(git branch --show-current)_$(git log -n1 --format=format:\"%H\")" >> $GITHUB_ENV
     - run: docker build -t hozefr/xebxke:${{env.tag}} .
-    - run: docker push hozefr/xebxke:${{env.tag}} .
+    - run: docker push hozefr/xebxke:${{env.tag}}
